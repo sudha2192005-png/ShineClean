@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login | ShineClean</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="user-auth.css">
+    <script src="user-login.js" defer></script>
+</head>
+<body class="auth-page">
+
+    <header class="navbar">
+        <a href="home.html" class="brand">
+            <span class="brand-icon">S</span>
+            ShineClean
+        </a>
+        <a href="home.html" class="back-home">Back to Home</a>
+    </header>
+
+    <main class="auth-container">
+        <section class="auth-card">
+            <div class="auth-logo">S</div>
+            <p class="auth-eyebrow">WELCOME TO SHINECLEAN</p>
+            <h1>User Login</h1>
+            <p class="auth-description">
+                Login to book and manage your cleaning services.
+            </p>
+
+            <form id="userLoginForm">
+                <label for="loginMobile">Mobile Number</label>
+                <input
+                    type="tel"
+                    id="loginMobile"
+                    placeholder="Enter your mobile number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+
+                <label for="loginPassword">Password</label>
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <p id="loginMessage" class="form-message"></p>
+
+                <button type="submit" class="auth-submit">
+                    Login
+                </button>
+            </form>
+
+            <p class="account-prompt">
+                New to ShineClean?
+                <a href="user-register.html">Create Account</a>
+            </p>
+        </section>
+    </main>
+
+</body>
+</html>

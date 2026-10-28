@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmation | ShineClean</title>
+  <link rel="stylesheet" href="booking.css">
+  <script src="booking.js" defer></script>
+</head>
+
+<body class="confirmation-page">
+
+
+<nav class="booking-navbar">
+    <a href="home.html" class="brand">
+        <span class="brand-icon">S</span>
+        <span>ShineClean</span>
+    </a>
+
+    <a href="home.html" class="home-link">Home</a>
+</nav>
+
+
+
+
+  <main class="confirmation-container">
+
+    <div class="confirmation-heading">
+      <p class="confirmation-label">SHINECLEAN BOOKING</p>
+      <h1>Your Home Cleaning Booking</h1>
+      <p>Review your booking and confirm your cleaning service.</p>
+    </div>
+
+    <section class="confirm-action-card">
+      <h2>Ready to confirm?</h2>
+      <p>
+        Please confirm your booking to generate your Booking ID
+        and save the details in this browser.
+      </p>
+
+      <button type="button" id="confirmBooking" class="confirm-btn">
+        Confirm Booking
+      </button>
+    </section>
+
+    <section id="confirmation" class="confirmation-card hidden">
+
+      <div class="confirmation-success">
+        <div class="success-mark">✓</div>
+        <h2>Booking Confirmed!</h2>
+        <p>Your ShineClean booking details are ready.</p>
+      </div>
+
+      <div class="booking-id-box">
+        <p>YOUR BOOKING ID</p>
+        <h2 id="bookingId">SC000000</h2>
+      </div>
+
+      <div class="confirmation-details">
+        <h3>Booking Details</h3>
+
+        <div class="confirmation-row">
+          <span>Service</span>
+          <strong id="confirmedService">-</strong>
+        </div>
+
+        <div class="confirmation-row">
+          <span>Booking Date</span>
+          <strong id="confirmedDate">-</strong>
+        </div>
+
+        <div class="confirmation-row">
+          <span>Customer Name</span>
+          <strong id="confirmedName">-</strong>
+        </div>
+
+        <div class="confirmation-row">
+          <span>Address</span>
+          <strong id="confirmedAddress">-</strong>
+        </div>
+
+        <div class="confirmation-row">
+          <span>Total Price</span>
+          <strong id="confirmedPrice">-</strong>
+        </div>
+
+        <div class="confirmation-row">
+          <span>Status</span>
+          <strong id="confirmedStatus" class="status-confirmed">
+            Confirmed
+          </strong>
+        </div>
+      </div>
+
+      <p class="demo-note">
+        Demo notice: This booking is saved in your current browser only.
+        Backend and database are not connected yet.
+      </p>
+
+      <button type="button" id="newBooking" class="new-booking-btn">
+        Book Another Service
+      </button>
+
+      <a href="book-cleaning.html" class="back-home-link">
+        Back to Home
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer class="confirmation-footer">
+    <p>ShineClean — Clean Home, Peace of Mind.</p>
+  </footer>
+
+</body>
+</html>

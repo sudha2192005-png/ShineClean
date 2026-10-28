@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bookings | ShineClean</title>
+  <link rel="stylesheet" href="booking.css">
+  <script src="booking.js" defer></script>
+</head>
+<body class="my-bookings-page">
+
+  <nav class="navbar">
+    <a href="book-cleaning.html" class="logo">ShineClean</a>
+    <div class="member2-nav-links">
+      <a href="book-cleaning.html">Home</a>
+      <a href="my-bookings.html" class="active">My Bookings</a>
+      <a href="track-service.html">Track Service</a>
+      <a href="notifications.html">Notifications</a>
+      <a href="safety.html">Safety &amp; Trust</a>
+    </div>
+  </nav>
+
+  <main class="my-bookings-container">
+    <section class="my-bookings-heading">
+      <p class="member2-eyebrow">YOUR SHINECLEAN ACCOUNT</p>
+      <h1>My Bookings</h1>
+      <p>View your cleaning bookings and track their progress.</p>
+    </section>
+
+    <div class="booking-summary-banner">
+      <div>
+        <h2>Your Cleaning Services</h2>
+        <p>All your confirmed bookings in one place.</p>
+      </div>
+      <div class="booking-count">
+        <span id="bookingCount">0</span>
+        <small>Bookings</small>
+      </div>
+    </div>
+
+    <section id="myBookingsList" class="my-bookings-list">
+      <!-- Booking cards will be added by booking.js -->
+    </section>
+
+    <section id="noBookingsMessage" class="no-bookings hidden">
+      <h2>No Bookings Yet</h2>
+      <p>Your confirmed cleaning bookings will appear here.</p>
+      <a href="select-service.html" class="member2-primary-btn">
+        Book a Cleaning
+      </a>
+    </section>
+
+    <p class="member2-demo-note">
+      Demo version: booking details are read from this browser's local storage.
+    </p>
+  </main>
+
+  <footer class="member2-footer">
+    ShineClean — Clean Home, Peace of Mind.
+  </footer>
+    <script src="booking.js" defer></script>
+</body>
+</html>

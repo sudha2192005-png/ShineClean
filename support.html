@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help &amp; Support | ShineClean</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="support-page">
+
+  <header class="support-header">
+    <a href="index.html" class="support-brand">ShineClean</a>
+    <nav class="support-nav">
+      <a href="index.html">Home</a>
+      <a href="safety.html">Safety Centre</a>
+      <a href="inventory.html">Home Inventory</a>
+      <a href="complaints.html">Complaints</a>
+    </nav>
+  </header>
+
+  <main class="support-container">
+    <section class="support-hero">
+      <span class="support-tag">WE'RE HERE FOR YOU</span>
+      <h1>How Can We Help?</h1>
+      <p>Find answers to common questions or send a support request to the ShineClean team.</p>
+    </section>
+
+    <section class="support-info-grid">
+      <article class="support-info-card">
+        <span class="support-icon" aria-hidden="true">?</span>
+        <h2>Quick Answers</h2>
+        <p>Read answers to common booking and cleaning questions.</p>
+      </article>
+
+      <article class="support-info-card">
+        <span class="support-icon" aria-hidden="true">✓</span>
+        <h2>Safety Support</h2>
+        <p>Get guidance about cleaner verification, inventory and photos.</p>
+      </article>
+
+      <article class="support-info-card">
+        <span class="support-icon" aria-hidden="true">✉</span>
+        <h2>Send a Request</h2>
+        <p>Describe your concern so the support team can review it.</p>
+      </article>
+    </section>
+
+    <section class="support-panel">
+      <h2>Frequently Asked Questions</h2>
+
+      <details class="support-faq">
+        <summary>How do I book a cleaning service?</summary>
+        <p>Open the services page, select your required cleaning service and follow the booking steps shown in your account.</p>
+      </details>
+
+      <details class="support-faq">
+        <summary>How can I check my cleaner's verification?</summary>
+        <p>Visit the Cleaner Verification page. If the status is pending or unavailable, contact support to confirm the details.</p>
+      </details>
+
+      <details class="support-faq">
+        <summary>Why should I use the Home Inventory checklist?</summary>
+        <p>It helps you record selected belongings and their condition before cleaning. It is a record-keeping tool, not proof that a loss or damage occurred.</p>
+      </details>
+
+      <details class="support-faq">
+        <summary>How do I report a missing or damaged item?</summary>
+        <p>Open the Complaints page, enter your booking details, explain what you observed and attach a relevant photo if available.</p>
+      </details>
+
+      <details class="support-faq">
+        <summary>Will my support request be saved?</summary>
+        <p>This demo displays requests during the current page session only. In the complete app, the backend must save requests so customers and authorised admins can access them later.</p>
+      </details>
+    </section>
+
+    <section class="support-panel">
+      <h2>Contact Support</h2>
+      <p class="support-muted">Tell us what help you need. Fields marked * are required.</p>
+
+      <form id="supportForm">
+        <div class="support-form-grid">
+          <div class="support-field">
+            <label for="supportBookingId">Booking ID (optional)</label>
+            <input type="text" id="supportBookingId" placeholder="e.g. SC1001">
+          </div>
+
+          <div class="support-field">
+            <label for="supportCategory">Support category *</label>
+            <select id="supportCategory" required>
+              <option value="">Select a category</option>
+              <option>Booking help</option>
+              <option>Payment help</option>
+              <option>Cleaner verification</option>
+              <option>Inventory or photo help</option>
+              <option>Complaint follow-up</option>
+              <option>Account help</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="support-field support-full">
+            <label for="supportSubject">Subject *</label>
+            <input type="text" id="supportSubject" maxlength="100" placeholder="Briefly describe your question" required>
+          </div>
+
+          <div class="support-field support-full">
+            <label for="supportDescription">How can we help? *</label>
+            <textarea id="supportDescription" rows="5" maxlength="2000" placeholder="Explain your issue clearly..." required></textarea>
+            <small class="support-muted">Maximum 2000 characters.</small>
+          </div>
+        </div>
+
+        <button type="submit" class="support-submit-btn">Send Support Request</button>
+        <p id="supportMessage" class="support-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="support-panel">
+      <div class="support-list-heading">
+        <div>
+          <h2>My Support Requests</h2>
+          <p class="support-muted">Requests submitted during this page session appear here.</p>
+        </div>
+        <span class="support-count" id="supportCount">0 requests</span>
+      </div>
+
+      <div id="supportRequestList" class="support-request-list">
+        <div class="support-empty">
+          <h3>No support requests yet</h3>
+          <p>Your submitted requests will appear here.</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="support-back"><a href="safety.html">← Back to Safety Centre</a></p>
+  </main>
+
+  <footer class="support-footer">
+    <p>© 2026 ShineClean. A cleaner home, a safer experience.</p>
+  </footer>
+
+</body>
+</html>

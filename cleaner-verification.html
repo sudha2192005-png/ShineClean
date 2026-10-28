@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleaner Verification | ShineClean</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="cleaner-verify-page">
+
+  <header class="cv-header">
+    <a href="index.html" class="cv-brand">ShineClean</a>
+    <nav class="cv-nav">
+      <a href="index.html">Home</a>
+      <a href="safety.html">Safety Centre</a>
+      <a href="inventory.html">Home Inventory</a>
+      <a href="photos.html">Photo Verification</a>
+    </nav>
+  </header>
+
+  <main class="cv-container">
+    <section class="cv-hero">
+      <span class="cv-tag">SAFETY FIRST</span>
+      <h1>Cleaner Verification</h1>
+      <p>Know your assigned cleaning professional's verification status before the service begins.</p>
+    </section>
+
+    <section class="cv-notice">
+      <strong>Why is verification important?</strong>
+      <p>Identity and screening checks help support safer service. Statuses should only be marked verified after the responsible team completes the checks.</p>
+    </section>
+
+    <section class="cv-card">
+      <div class="cv-card-heading">
+        <div class="cv-avatar" aria-hidden="true">SC</div>
+        <div>
+          <span class="cv-label">ASSIGNED CLEANER</span>
+          <h2>Cleaner details</h2>
+          <p class="cv-muted">Your booking's assigned cleaner information will appear here.</p>
+        </div>
+      </div>
+
+      <div class="cv-details">
+        <div class="cv-detail">
+          <span>Cleaner name</span>
+          <strong id="cvCleanerName">Not assigned yet</strong>
+        </div>
+        <div class="cv-detail">
+          <span>Employee ID</span>
+          <strong id="cvEmployeeId">Not available</strong>
+        </div>
+        <div class="cv-detail">
+          <span>Identity check</span>
+          <strong class="cv-status cv-pending" id="cvIdentityStatus">Awaiting confirmation</strong>
+        </div>
+        <div class="cv-detail">
+          <span>Background check</span>
+          <strong class="cv-status cv-pending" id="cvBackgroundStatus">Awaiting confirmation</strong>
+        </div>
+      </div>
+
+      <p class="cv-small-note" id="cvStatusNote">
+        No verification result has been provided yet. Please confirm the status with ShineClean support.
+      </p>
+    </section>
+
+    <section class="cv-card">
+      <h2>Check your booking</h2>
+      <p class="cv-muted">Enter your booking ID to keep a reference for your support request.</p>
+
+      <form id="cvBookingForm">
+        <label for="cvBookingId">Booking ID</label>
+        <div class="cv-booking-row">
+          <input type="text" id="cvBookingId" placeholder="e.g. SC1001" required>
+          <button type="submit" class="cv-button">Check</button>
+        </div>
+        <p id="cvBookingMessage" class="cv-message" role="status"></p>
+      </form>
+    </section>
+
+    <section class="cv-card">
+      <h2>Before allowing service to begin</h2>
+      <ul class="cv-checklist">
+        <li>Confirm the booking through your ShineClean account.</li>
+        <li>Check the cleaner's identity against the details supplied by ShineClean.</li>
+        <li>Do not rely on this demo page as proof of identity verification.</li>
+        <li>If details do not match, pause the service and contact support.</li>
+      </ul>
+      <a href="support.html" class="cv-support-link">Need help? Contact Support →</a>
+    </section>
+
+    <p class="cv-back"><a href="safety.html">← Back to Safety Centre</a></p>
+  </main>
+
+  <footer class="cv-footer">
+    <p>© 2026 ShineClean. A cleaner home, a safer experience.</p>
+  </footer>
+
+</body>
+</html>

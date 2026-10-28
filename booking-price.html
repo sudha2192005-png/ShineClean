@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Summary | ShineClean</title>
+    <link rel="stylesheet" href="booking.css">
+    <script src="booking.js" defer></script>
+</head>
+
+<body class="price-page">
+
+    <header class="booking-navbar">
+        <a href="about.html" class="booking-logo">ShineClean</a>
+        <nav>
+            <a href="about.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="support.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="price-main">
+
+        <section class="price-heading">
+            <span class="booking-label">ALMOST THERE</span>
+            <h1>Review your <span>booking.</span></h1>
+            <p>Check your service details and estimated price before confirming.</p>
+
+            <div class="service-step-indicator">
+                <span>1. Select Service</span>
+                <span>2. Booking Details</span>
+                <span class="step-active">3. Price Summary</span>
+                <span>4. Confirmation</span>
+            </div>
+        </section>
+
+        <section class="price-layout">
+
+            <div class="price-details-card">
+                <h2>Booking Details</h2>
+                <p class="price-subtitle">Please review the information below.</p>
+
+                <div class="price-service-banner">
+                    <div class="price-service-icon">
+                        <img
+                            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=500&q=80"
+                            alt="Home cleaning service"
+                        >
+                    </div>
+                    <div>
+                        <span class="service-category">SELECTED SERVICE</span>
+                        <h3 id="priceService">Cleaning Service</h3>
+                        <p>Professional home cleaning</p>
+                    </div>
+                </div>
+
+                <div class="price-info-grid">
+                    <div class="price-info-item">
+                        <span>Home Size</span>
+                        <strong id="priceHomeSize">—</strong>
+                    </div>
+                    <div class="price-info-item">
+                        <span>Number of Rooms</span>
+                        <strong id="priceRooms">—</strong>
+                    </div>
+                    <div class="price-info-item">
+                        <span>Booking Date</span>
+                        <strong id="priceDate">—</strong>
+                    </div>
+                    <div class="price-info-item">
+                        <span>Time Slot</span>
+                        <strong id="priceTime">—</strong>
+                    </div>
+                </div>
+
+                <div class="price-section-divider"></div>
+
+                <h2>Service Address</h2>
+                <p id="priceAddress" class="price-address">
+                    Address will appear here.
+                </p>
+
+                <div class="price-section-divider"></div>
+
+                <h2>Price Breakdown</h2>
+
+                <div class="price-row">
+                    <span>Service Base Price</span>
+                    <strong id="priceBase">₹0</strong>
+                </div>
+
+                <div class="price-row">
+                    <span>Extra Room Charges</span>
+                    <strong id="priceExtra">₹0</strong>
+                </div>
+
+                <p class="price-calculation-note">
+                    Additional rooms are charged at ₹150 per room
+                    beyond the first room.
+                </p>
+
+                <div class="price-total-row">
+                    <div>
+                        <span>Total Estimated Price</span>
+                        <small>Amount payable for this demo booking</small>
+                    </div>
+                    <strong id="priceTotal">₹0</strong>
+                </div>
+
+                <p class="price-demo-note">
+                    Demo pricing only. Live service availability, final charges
+                    and payment processing are not connected yet.
+                </p>
+
+                <div class="price-actions">
+                    <button type="button" id="editBooking" class="price-back-btn">
+                        Edit Details
+                    </button>
+
+                    <button type="button" id="continueBooking"
+                            class="booking-primary-btn">
+                        Continue to Confirmation
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+
+            <aside class="price-trust-card">
+                <img
+                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80"
+                    alt="Clean and comfortable modern home"
+                >
+
+                <div class="price-trust-content">
+                    <h2>A fresh home starts here.</h2>
+                    <p>
+                        Review your details carefully. Your demo booking
+                        will be saved when you confirm it on the next page.
+                    </p>
+
+                    <div class="price-trust-item">
+                        <span class="trust-line"></span>
+                        <div>
+                            <strong>Transparent Pricing</strong>
+                            <p>Base and extra room costs shown separately.</p>
+                        </div>
+                    </div>
+
+                    <div class="price-trust-item">
+                        <span class="trust-line"></span>
+                        <div>
+                            <strong>Your Selected Schedule</strong>
+                            <p>Review your preferred date and time.</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+        </section>
+    </main>
+
+    <footer class="booking-footer">
+        <p>© 2026 ShineClean. A cleaner home, a safer experience.</p>
+    </footer>
+
+</body>
+</html>

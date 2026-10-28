@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Photo Verification | ShineClean</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Photo Verification Page */
+
+        .photo-page {
+            max-width: 1050px;
+            margin: auto;
+            padding: 35px 20px 60px;
+            color: #183153;
+        }
+
+        .photo-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 18px 6%;
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .photo-brand {
+            color: #1769d2;
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .photo-nav a:last-child {
+            color: #1769d2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .photo-heading {
+            text-align: center;
+            padding: 25px 0;
+        }
+
+        .photo-label {
+            color: #1769d2;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .photo-heading h1 {
+            margin: 12px 0;
+            font-size: 36px;
+        }
+
+        .photo-heading p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .photo-info {
+            padding: 15px 18px;
+            margin-bottom: 24px;
+            border-radius: 10px;
+            background: #eff6ff;
+            color: #1e40af;
+            line-height: 1.6;
+        }
+
+        .upload-card,
+        .photo-record {
+            background: white;
+            border: 1px solid #dce5f0;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 18px rgba(20, 50, 90, 0.06);
+        }
+
+        .upload-card h2,
+        .uploaded-section h2 {
+            margin-top: 0;
+        }
+
+        #photoUploadForm label {
+            display: block;
+            margin: 16px 0 8px;
+            font-weight: 600;
+        }
+
+        #photoUploadForm input,
+        #photoUploadForm select {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            background: #fff;
+            font: inherit;
+        }
+
+        .photo-input-grid,
+        .record-photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .upload-preview {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            background: #f1f5f9;
+            border-radius: 8px;
+            margin-top: 12px;
+        }
+
+        .photo-submit {
+            width: 100%;
+            padding: 14px;
+            margin-top: 24px;
+            border: none;
+            border-radius: 8px;
+            background: #1769d2;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .photo-submit:hover {
+            background: #1055ad;
+        }
+
+        #photoMessage {
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .photo-note {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .record-photo-grid img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+
+        .record-photo-grid h3 {
+            font-size: 15px;
+        }
+
+        .record-photo p {
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        .photo-status {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 20px;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .photo-footer {
+            padding: 22px;
+            text-align: center;
+            background: #f1f5f9;
+            color: #64748b;
+        }
+
+        @media (max-width: 600px) {
+            .photo-input-grid,
+            .record-photo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-heading h1 {
+                font-size: 28px;
+            }
+
+            .upload-card,
+            .photo-record {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="photo-nav">
+            <a href="index.html" class="photo-brand">ShineClean</a>
+            <a href="safety.html">← Back to Safety Center</a>
+        </div>
+    </header>
+
+    <main class="photo-page">
+
+        <!-- Page Heading -->
+        <section class="photo-heading">
+            <span class="photo-label">SAFE CLEANING EXPERIENCE</span>
+            <h1>Photo Verification</h1>
+            <p>
+                Document your cleaning service with before and after
+                photos for a transparent cleaning experience.
+            </p>
+        </section>
+
+        <div class="photo-info">
+            <strong>How it works:</strong>
+            Select your role, enter the booking ID, upload the
+            before and after photos, and submit your record.
+        </div>
+
+        <!-- Photo Upload Form -->
+        <section class="upload-card">
+            <h2>Upload Cleaning Photos</h2>
+
+            <form id="photoUploadForm">
+
+                <label for="uploaderRole">Who are you?</label>
+                <select id="uploaderRole" required>
+                    <option value="">Select your role</option>
+                    <option value="Customer">Customer</option>
+                    <option value="Cleaning Staff">Cleaning Staff</option>
+                </select>
+
+                <label for="bookingId">Booking ID</label>
+                <input
+                    type="text"
+                    id="bookingId"
+                    placeholder="Example: SC101"
+                    required
+                >
+
+                <div class="photo-input-grid">
+
+                    <!-- Before Photo -->
+                    <div>
+                        <label for="beforePhoto">
+                            Before Cleaning Photo
+                        </label>
+
+                        <input
+                            type="file"
+                            id="beforePhoto"
+                            accept="image/*"
+                            required
+                        >
+
+                        <img
+                            id="beforePreview"
+                            class="upload-preview"
+                            alt="Before cleaning preview"
+                            hidden
+                        >
+                    </div>
+
+                    <!-- After Photo -->
+                    <div>
+                        <label for="afterPhoto">
+                            After Cleaning Photo
+                        </label>
+
+                        <input
+                            type="file"
+                            id="afterPhoto"
+                            accept="image/*"
+                            required
+                        >
+
+                        <img
+                            id="afterPreview"
+                            class="upload-preview"
+                            alt="After cleaning preview"
+                            hidden
+                        >
+                    </div>
+
+                </div>
+
+                <button type="submit" class="photo-submit">
+                    Submit Photos
+                </button>
+
+                <p id="photoMessage" role="status" aria-live="polite"></p>
+
+            </form>
+        </section>
+
+        <!-- Uploaded Records -->
+        <section class="uploaded-section">
+            <h2>Uploaded Photo Records</h2>
+
+            <p class="photo-note">
+                Your submitted records will appear here during this
+                browser session.
+            </p>
+
+            <div id="photoRecords" class="photo-records"></div>
+        </section>
+
+    </main>
+
+    <footer class="photo-footer">
+        <p>© 2026 ShineClean. A Cleaner Home. A Safer Experience.</p>
+    </footer>
+
+    <!-- Existing JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

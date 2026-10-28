@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complaints | ShineClean</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="complaints-page">
+
+  <header class="complaints-header">
+    <a href="index.html" class="complaints-brand">ShineClean</a>
+    <nav class="complaints-nav">
+      <a href="index.html">Home</a>
+      <a href="safety.html">Safety Centre</a>
+      <a href="inventory.html">Home Inventory</a>
+      <a href="support.html">Help &amp; Support</a>
+    </nav>
+  </header>
+
+  <main class="complaints-container">
+    <section class="complaints-hero">
+      <span class="complaints-tag">WE'RE HERE TO HELP</span>
+      <h1>Submit a Complaint</h1>
+      <p>Tell us about your cleaning experience. We will keep your report organised for review.</p>
+    </section>
+
+    <section class="complaints-notice">
+      <strong>Before submitting</strong>
+      <p>Include the booking ID and clear details. If you report a missing or damaged item, describe what you observed without making assumptions about who is responsible.</p>
+    </section>
+
+    <section class="complaints-panel">
+      <h2>Complaint Details</h2>
+      <p class="complaints-muted">Fields marked * are required.</p>
+
+      <form id="complaintForm">
+        <div class="complaints-form-grid">
+          <div class="complaints-field">
+            <label for="complaintBookingId">Booking ID *</label>
+            <input type="text" id="complaintBookingId" placeholder="e.g. SC1001" required>
+          </div>
+
+          <div class="complaints-field">
+            <label for="complaintCategory">Complaint category *</label>
+            <select id="complaintCategory" required>
+              <option value="">Choose a category</option>
+              <option>Cleaning quality</option>
+              <option>Item missing</option>
+              <option>Item damaged</option>
+              <option>Cleaner behaviour</option>
+              <option>Late arrival or missed booking</option>
+              <option>Payment issue</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="complaints-field complaints-full">
+            <label for="complaintSubject">Subject *</label>
+            <input type="text" id="complaintSubject" maxlength="100" placeholder="Briefly describe your concern" required>
+          </div>
+
+          <div class="complaints-field complaints-full">
+            <label for="complaintDescription">Describe the issue *</label>
+            <textarea id="complaintDescription" rows="5" maxlength="2000" placeholder="When did it happen? What did you observe? Include any relevant details." required></textarea>
+            <small class="complaints-muted">Maximum 2000 characters.</small>
+          </div>
+
+          <div class="complaints-field complaints-full">
+            <label for="complaintPhoto">Supporting photo (optional)</label>
+            <input type="file" id="complaintPhoto" accept="image/*">
+            <img id="complaintPhotoPreview" class="complaints-photo-preview" alt="Complaint photo preview" hidden>
+            <small class="complaints-muted">Upload only relevant photos. Avoid sharing private documents or sensitive personal information.</small>
+          </div>
+        </div>
+
+        <button type="submit" class="complaints-submit-btn">Submit Complaint</button>
+        <p id="complaintMessage" class="complaints-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="complaints-panel">
+      <div class="complaints-list-heading">
+        <div>
+          <h2>My Submitted Complaints</h2>
+          <p class="complaints-muted">Complaints submitted during this page session appear here.</p>
+        </div>
+        <span id="complaintCount" class="complaints-count">0 complaints</span>
+      </div>
+
+      <div id="complaintList" class="complaints-list">
+        <div class="complaints-empty">
+          <h3>No complaints submitted</h3>
+          <p>Your submitted complaints will appear here.</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="complaints-back"><a href="safety.html">← Back to Safety Centre</a></p>
+  </main>
+
+  <footer class="complaints-footer">
+    <p>© 2026 ShineClean. A cleaner home, a safer experience.</p>
+  </footer>
+
+</body>
+</html>

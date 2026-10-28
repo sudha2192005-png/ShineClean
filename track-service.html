@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Service | ShineClean</title>
+  <link rel="stylesheet" href="booking.css">
+  <script src="booking.js" defer></script>
+</head>
+
+<body class="track-service-page">
+
+  <nav class="navbar">
+    <a href="book-cleaning.html" class="logo">ShineClean</a>
+
+    <div class="member2-nav-links">
+      <a href="book-cleaning.html">Home</a>
+      <a href="my-bookings.html">My Bookings</a>
+      <a href="track-service.html" class="active">Track Service</a>
+      <a href="notifications.html">Notifications</a>
+      <a href="safety.html">Safety &amp; Trust</a>
+    </div>
+  </nav>
+
+  <main class="tracking-container">
+
+    <section class="tracking-heading">
+      <p class="member2-eyebrow">SHINECLEAN SERVICE TRACKING</p>
+      <h1>Track Your Cleaning Service</h1>
+      <p>Check your booking details and cleaning progress.</p>
+    </section>
+
+    <section id="trackingDetails" class="tracking-card hidden">
+
+      <div class="tracking-card-heading">
+        <div>
+          <p class="tracking-small-label">BOOKING ID</p>
+          <h2 id="trackBookingId">-</h2>
+        </div>
+
+        <span id="trackStatus" class="booking-status-badge">
+          Confirmed
+        </span>
+      </div>
+
+      <div class="tracking-booking-info">
+        <div>
+          <span>Cleaning Service</span>
+          <strong id="trackServiceName">-</strong>
+        </div>
+
+        <div>
+          <span>Booking Date</span>
+          <strong id="trackDate">-</strong>
+        </div>
+
+        <div>
+          <span>Time Slot</span>
+          <strong id="trackTime">-</strong>
+        </div>
+
+        <div>
+          <span>Customer</span>
+          <strong id="trackCustomer">-</strong>
+        </div>
+      </div>
+
+      <div class="tracking-progress-section">
+        <h3>Cleaning Progress</h3>
+        <p id="trackProgressMessage">
+          Your booking has been confirmed.
+        </p>
+
+        <div class="progress-track">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+
+        <div class="progress-steps">
+          <div class="progress-step" data-step="1">
+            <span>1</span>
+            <p>Confirmed</p>
+          </div>
+
+          <div class="progress-step" data-step="2">
+            <span>2</span>
+            <p>Staff Assigned</p>
+          </div>
+
+          <div class="progress-step" data-step="3">
+            <span>3</span>
+            <p>Cleaning Started</p>
+          </div>
+
+          <div class="progress-step" data-step="4">
+            <span>4</span>
+            <p>Completed</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="staff-info-box">
+        <h3>Staff Information</h3>
+        <p id="trackStaffInfo">
+          Staff assignment is pending.
+        </p>
+      </div>
+
+      <p class="member2-demo-note">
+        Demo version: progress is displayed from saved browser data.
+        Real-time staff updates require backend integration.
+      </p>
+
+    </section>
+
+    <section id="trackingEmpty" class="no-bookings">
+      <h2>Booking Not Found</h2>
+      <p>Please open Track Service from a booking in My Bookings.</p>
+      <a href="my-bookings.html" class="member2-primary-btn">
+        View My Bookings
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="member2-footer">
+    ShineClean — Clean Home, Peace of Mind.
+  </footer>
+    <script src="booking.js" defer></script>
+</body>
+</html>

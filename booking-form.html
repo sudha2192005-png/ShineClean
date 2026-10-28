@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Details | ShineClean</title>
+
+    <link rel="stylesheet" href="booking.css">
+    <script src="booking.js" defer></script>
+</head>
+
+<body class="booking-form-page">
+
+    <header class="booking-navbar">
+        <a href="about.html" class="booking-logo">ShineClean</a>
+
+        <nav>
+            <a href="about.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="support.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="booking-form-main">
+
+        <section class="booking-form-heading">
+            <span class="booking-label">YOUR CLEANING, YOUR SCHEDULE</span>
+
+            <h1>Let's plan your <span>cleaning.</span></h1>
+
+            <p>
+                Share a few details so we can plan a convenient
+                cleaning appointment for your home.
+            </p>
+
+            <div class="service-step-indicator">
+                <span>1. Select Service</span>
+                <span class="step-active">2. Booking Details</span>
+                <span>3. Price Summary</span>
+                <span>4. Confirmation</span>
+            </div>
+        </section>
+
+        <section class="booking-form-layout">
+
+            <div class="booking-form-panel">
+
+                <div class="form-panel-title">
+                    <h2>Booking Information</h2>
+                    <p>Fields marked * are required.</p>
+                </div>
+
+                <form id="bookingForm">
+
+                    <div class="form-field">
+                        <label for="service">Selected Service *</label>
+
+                        <select id="service" name="service" required>
+                            <option value="">Choose a service</option>
+                            <option value="Home Cleaning">Home Cleaning</option>
+                            <option value="Deep Cleaning">Deep Cleaning</option>
+                            <option value="Kitchen Cleaning">Kitchen Cleaning</option>
+                            <option value="Bathroom Cleaning">Bathroom Cleaning</option>
+                            <option value="Sofa Cleaning">Sofa Cleaning</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="homeSize">Home Size *</label>
+
+                        <select id="homeSize" name="homeSize" required>
+                            <option value="">Select home size</option>
+                            <option value="1 BHK">1 BHK</option>
+                            <option value="2 BHK">2 BHK</option>
+                            <option value="3 BHK">3 BHK</option>
+                            <option value="4 BHK or larger">4 BHK or larger</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="rooms">Number of Rooms *</label>
+
+                        <select id="rooms" name="rooms" required>
+                            <option value="1">1 Room</option>
+                            <option value="2">2 Rooms</option>
+                            <option value="3">3 Rooms</option>
+                            <option value="4">4 Rooms</option>
+                            <option value="5">5 Rooms</option>
+                            <option value="6">6 Rooms</option>
+                        </select>
+
+                        <small>
+                            Each additional room adds ₹150 to the base price.
+                        </small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="bookingDate">Preferred Date *</label>
+
+                        <input
+                            type="date"
+                            id="bookingDate"
+                            name="bookingDate"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="timeSlot">Preferred Time Slot *</label>
+
+                        <select id="timeSlot" name="timeSlot" required>
+                            <option value="">Choose a time slot</option>
+                            <option value="08:00 AM - 10:00 AM">08:00 AM - 10:00 AM</option>
+                            <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+                            <option value="12:00 PM - 02:00 PM">12:00 PM - 02:00 PM</option>
+                            <option value="02:00 PM - 04:00 PM">02:00 PM - 04:00 PM</option>
+                            <option value="04:00 PM - 06:00 PM">04:00 PM - 06:00 PM</option>
+                        </select>
+
+                        <small>
+                            These are demo time slots, not live availability.
+                        </small>
+                    </div>
+
+                    <div class="form-divider"></div>
+
+                    <div class="form-panel-title">
+                        <h2>Contact Information</h2>
+                        <p>Where should we provide the service?</p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="customerName">Full Name *</label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            name="customerName"
+                            placeholder="Enter your full name"
+                            maxlength="80"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Mobile Number *</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="10-digit mobile number"
+                            inputmode="numeric"
+                            pattern="[6-9][0-9]{9}"
+                            maxlength="10"
+                            autocomplete="tel"
+                            title="Enter a valid 10-digit Indian mobile number"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="address">Full Service Address *</label>
+
+                        <textarea
+                            id="address"
+                            name="address"
+                            rows="3"
+                            placeholder="House number, street, area, city, PIN code"
+                            maxlength="500"
+                            autocomplete="street-address"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="instructions">
+                            Special Instructions (Optional)
+                        </label>
+
+                        <textarea
+                            id="instructions"
+                            name="instructions"
+                            rows="3"
+                            maxlength="500"
+                            placeholder="Mention any special cleaning requirements"
+                        ></textarea>
+                    </div>
+
+                    <p id="formMessage" class="form-message"
+                       role="alert" aria-live="polite"></p>
+
+                    <div class="form-actions">
+                        <a href="select-service.html" class="form-back-btn">
+                            Back to Services
+                        </a>
+
+                        <button type="submit" class="booking-primary-btn">
+                            Continue to Price
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+            <aside class="booking-summary-panel">
+
+                <img
+                    src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=85"
+                    alt="A professional cleaner preparing a home for cleaning"
+                >
+
+                <div class="booking-summary-content">
+                    <span class="booking-label">YOUR BOOKING</span>
+
+                    <h2>Estimated Price</h2>
+
+                    <p class="summary-description">
+                        Your total will update when you change
+                        the service or number of rooms.
+                    </p>
+
+                    <div class="summary-row">
+                        <span>Service Price</span>
+                        <strong id="basePrice">₹0</strong>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Extra Room Cost</span>
+                        <strong id="extraPrice">₹0</strong>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-row summary-total">
+                        <span>Estimated Total</span>
+                        <strong id="totalPrice">₹0</strong>
+                    </div>
+
+                    <p class="summary-note">
+                        This is a frontend demo estimate. Final prices
+                        and availability would need backend verification.
+                    </p>
+                </div>
+            </aside>
+
+        </section>
+    </main>
+
+    <footer class="booking-footer">
+        <p>© 2026 ShineClean. A cleaner home, a safer experience.</p>
+    </footer>
+
+</body>
+</html>

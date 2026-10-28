@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Inventory | ShineClean</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="inventory-page">
+
+  <header class="inventory-header">
+    <a href="index.html" class="inventory-brand">ShineClean</a>
+    <nav class="inventory-nav">
+      <a href="index.html">Home</a>
+      <a href="safety.html">Safety</a>
+      <a href="photos.html">Photo Verification</a>
+      <a href="inventory.html" class="active">Home Inventory</a>
+    </nav>
+  </header>
+
+  <main class="inventory-container">
+    <section class="inventory-hero">
+      <span class="inventory-tag">YOUR HOME, YOUR CONTROL</span>
+      <h1>Home Inventory Checklist</h1>
+      <p>Record valuable belongings before cleaning and review their condition afterwards.</p>
+    </section>
+
+    <section class="inventory-notice">
+      <strong>Before you begin</strong>
+      <p>Record item details and take clear photos. This checklist helps you maintain a record; it does not independently prove loss or damage.</p>
+    </section>
+
+    <section class="inventory-panel">
+      <h2>Add a Valuable Item</h2>
+      <p class="inventory-muted">Enter the details of an item you want to keep track of.</p>
+
+      <form id="inventoryForm">
+        <div class="inventory-form-grid">
+          <div class="inventory-field">
+            <label for="itemName">Item name *</label>
+            <input type="text" id="itemName" placeholder="e.g. Gold chain, watch" required>
+          </div>
+
+          <div class="inventory-field">
+            <label for="itemRoom">Room *</label>
+            <select id="itemRoom" required>
+              <option value="">Select room</option>
+              <option>Bedroom</option>
+              <option>Living Room</option>
+              <option>Kitchen</option>
+              <option>Bathroom</option>
+              <option>Study Room</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="inventory-field">
+            <label for="itemQuantity">Quantity *</label>
+            <input type="number" id="itemQuantity" min="1" value="1" required>
+          </div>
+
+          <div class="inventory-field">
+            <label for="itemStatus">Condition before cleaning *</label>
+            <select id="itemStatus" required>
+              <option value="">Select condition</option>
+              <option>Good</option>
+              <option>Minor damage</option>
+              <option>Needs attention</option>
+            </select>
+          </div>
+
+          <div class="inventory-field inventory-full">
+            <label for="itemNotes">Description / Notes</label>
+            <textarea id="itemNotes" rows="3" placeholder="Colour, identifying details, existing damage, etc."></textarea>
+          </div>
+
+          <div class="inventory-field inventory-full">
+            <label for="itemPhoto">Item photo (optional)</label>
+            <input type="file" id="itemPhoto" accept="image/*">
+            <img id="itemPhotoPreview" class="inventory-photo-preview" alt="Selected item preview" hidden>
+            <small class="inventory-muted">Choose a clear photo. Avoid including passwords, documents or other sensitive details.</small>
+          </div>
+        </div>
+
+        <button type="submit" class="inventory-primary-btn">+ Add to Checklist</button>
+        <p id="inventoryMessage" class="inventory-message" role="status"></p>
+      </form>
+    </section>
+
+    <section class="inventory-panel">
+      <div class="inventory-list-heading">
+        <div>
+          <h2>Your Inventory</h2>
+          <p class="inventory-muted">Review the items recorded for your cleaning visit.</p>
+        </div>
+        <span class="inventory-count" id="inventoryCount">0 items</span>
+      </div>
+
+      <div id="inventoryList" class="inventory-list">
+        <div class="inventory-empty">
+          <span class="inventory-empty-icon">□</span>
+          <h3>No items added yet</h3>
+          <p>Add your first item using the form above.</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="inventory-back-link"><a href="safety.html">← Back to Safety Centre</a></p>
+  </main>
+
+  <footer class="inventory-footer">
+    <p>© 2026 ShineClean. A cleaner home, a safer experience.</p>
+  </footer>
+
+</body>
+</html>
