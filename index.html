@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShineClean | Professional Home Cleaning Services</title>
+
+    <meta name="description"
+          content="Book reliable home cleaning services with ShineClean. Enjoy a cleaner home and peace of mind.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+
+        <a href="home.html" class="brand" aria-label="ShineClean Home">
+            <span class="brand-icon">S</span>
+            <span>Shine<span class="brand-highlight">Clean</span></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="home.html" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#why-us">Why ShineClean</a>
+            <a href="safety.html">Safety &amp; Trust</a>
+
+            <div class="login-dropdown">
+                <button class="login-btn" id="loginButton"
+                        aria-expanded="false">
+                    Login <span aria-hidden="true">⌄</span>
+                </button>
+
+                <div class="dropdown-menu" id="loginMenu">
+                    <a href="user-login.html">User Login</a>
+                    <a href="admin-login.html">Admin Login</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO SECTION ================= -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    PROFESSIONAL HOME CLEANING
+                </span>
+
+                <h1>
+                    A Cleaner Home.<br>
+                    <span>A Happier Life.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Your home deserves the best care. Book trusted
+                    cleaning services, manage your bookings and enjoy
+                    a fresh, comfortable living space with ShineClean.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="user-login.html" class="primary-btn">
+                        Book a Cleaning
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a href="#services" class="secondary-btn">
+                        Explore Services
+                    </a>
+                </div>
+
+                <div class="trust-points">
+                    <span>Professional Service</span>
+                    <span>Easy Booking</span>
+                    <span>Service Tracking</span>
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <img
+                    class="hero-image"
+                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80"
+                    alt="Professional cleaner maintaining a clean home"
+                    fetchpriority="high"
+                >
+
+                <div class="floating-card">
+                    <div class="floating-icon">SC</div>
+                    <div>
+                        <strong>Care in Every Corner</strong>
+                        <p>Clean spaces, peace of mind.</p>
+                    </div>
+                </div>
+
+                <div class="image-decoration"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRUST STRIP ================= -->
+        <section class="trust-strip" aria-label="Our service benefits">
+
+            <div class="trust-item">
+                <span class="trust-number">01</span>
+                <div>
+                    <strong>Easy Booking</strong>
+                    <p>Book your preferred service</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <span class="trust-number">02</span>
+                <div>
+                    <strong>Track Your Service</strong>
+                    <p>Follow booking progress</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <span class="trust-number">03</span>
+                <div>
+                    <strong>Safety Awareness</strong>
+                    <p>Clear service communication</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVICES ================= -->
+        <section class="services section" id="services">
+
+            <div class="section-heading">
+                <span class="eyebrow">OUR SERVICES</span>
+                <h2>Cleaning Solutions for Every Home</h2>
+                <p>
+                    From everyday cleaning to detailed deep cleaning,
+                    find the right service for your space.
+                </p>
+            </div>
+
+            <div class="service-grid">
+
+                <article class="service-card">
+
+                    <div class="service-image-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80"
+                            alt="Professional home cleaning"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="service-info">
+                        <span class="service-label">EVERYDAY CARE</span>
+                        <h3>Home Cleaning</h3>
+                        <p>
+                            Keep your living spaces clean, comfortable
+                            and welcoming.
+                        </p>
+
+                        <a href="user-login.html" class="service-link">
+                            Book Service <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-image-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80"
+                            alt="Beautiful, well-maintained home interior"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="service-info">
+                        <span class="service-label">DETAILED CARE</span>
+                        <h3>Deep Cleaning</h3>
+                        <p>
+                            Give your home a more thorough clean,
+                            including hard-to-reach areas.
+                        </p>
+
+                        <a href="user-login.html" class="service-link">
+                            Book Service <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-image-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80"
+                            alt="Clean and organised kitchen"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="service-info">
+                        <span class="service-label">SPECIALISED CARE</span>
+                        <h3>Kitchen Cleaning</h3>
+                        <p>
+                            Maintain a fresh, organised and
+                            comfortable kitchen.
+                        </p>
+
+                        <a href="user-login.html" class="service-link">
+                            Book Service <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+
+                </article>
+
+            </div>
+
+            <div class="services-bottom">
+                <p>Ready to give your home a fresh start?</p>
+                <a href="user-login.html" class="primary-btn">
+                    Book Your Cleaning
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- ================= WHY SHINECLEAN ================= -->
+        <section class="why-section section" id="why-us">
+
+            <div class="why-image">
+                <img
+                    src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1000&q=85"
+                    alt="Cleaning supplies prepared for home cleaning"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="why-content">
+
+                <span class="eyebrow">THE SHINECLEAN DIFFERENCE</span>
+
+                <h2>More Than Cleaning.<br>
+                    <span>Care You Can Feel.</span>
+                </h2>
+
+                <p>
+                    We make your cleaning experience simple and organised,
+                    from choosing a service to following its progress.
+                </p>
+
+                <div class="why-feature">
+                    <span class="feature-number">01</span>
+                    <div>
+                        <h3>Simple Booking Experience</h3>
+                        <p>Choose your service and preferred schedule.</p>
+                    </div>
+                </div>
+
+                <div class="why-feature">
+                    <span class="feature-number">02</span>
+                    <div>
+                        <h3>Booking and Service Updates</h3>
+                        <p>View your bookings and check their status.</p>
+                    </div>
+                </div>
+
+                <div class="why-feature">
+                    <span class="feature-number">03</span>
+                    <div>
+                        <h3>Responsible Service Process</h3>
+                        <p>
+                            Support clear communication about belongings
+                            and cleaning requirements.
+                        </p>
+                    </div>
+                </div>
+
+                <a href="user-login.html" class="primary-btn">
+                    Get Started <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT US ================= -->
+        <section class="about section" id="about">
+
+            <div class="about-content">
+                <span class="eyebrow">ABOUT SHINECLEAN</span>
+
+                <h2>A Fresh Start Begins at Home</h2>
+
+                <p>
+                    ShineClean is designed to make home cleaning
+                    convenient and organised. Our website brings
+                    service booking, booking history, progress tracking
+                    and safety-related features together in one place.
+                </p>
+
+                <a href="user-login.html" class="secondary-btn">
+                    Start Your Journey
+                </a>
+            </div>
+
+            <div class="about-highlight">
+                <span class="highlight-mark">SC</span>
+                <h3>Your Home. Your Comfort.</h3>
+                <p>
+                    A cleaner space and a more organised cleaning
+                    experience, all in one place.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= CALL TO ACTION ================= -->
+        <section class="cta-section">
+
+            <div>
+                <span class="eyebrow">YOUR CLEAN HOME STARTS HERE</span>
+                <h2>Make Room for What Matters.</h2>
+                <p>Let ShineClean help you enjoy a fresher home.</p>
+            </div>
+
+            <a href="user-login.html" class="cta-btn">
+                Book a Cleaning <span aria-hidden="true">→</span>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="footer-main">
+
+            <div class="footer-about">
+                <a href="home.html" class="footer-brand">
+                    <span class="brand-icon">S</span>
+                    ShineClean
+                </a>
+
+                <p>
+                    Professional home cleaning services for a cleaner,
+                    more comfortable living space.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="home.html">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About Us</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Your Account</h3>
+                <a href="user-login.html">User Login</a>
+                <a href="admin-login.html">Admin Login</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ShineClean. All rights reserved.</p>
+            <p>Clean Home. Peace of Mind.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
