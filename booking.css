@@ -1911,6 +1911,9 @@ body {
     padding: 18px 5%;
     background: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Mobile responsive */
@@ -2059,3 +2062,68 @@ body {
     }
 }
 
+/* Track Service - Navbar */
+.track-service-page .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.track-service-page .brand {
+  font-size: 27px;
+  font-weight: 800;
+  color: #2057b5;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.track-service-page .member2-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.track-service-page .member2-nav-links a {
+  color: #24334d;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease;
+}
+
+.track-service-page .member2-nav-links a:hover,
+.track-service-page .member2-nav-links a.active {
+  color: #2057b5;
+  border-bottom-color: #2057b5;
+}
+
+@media (max-width: 768px) {
+  .track-service-page .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .track-service-page .member2-nav-links {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+}
+/* ShineClean Brand - Track Service and Notifications */
+.track-service-page .navbar .brand,
+.notifications-page .navbar .brand {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: #2057b5 !important;
+  text-decoration: none !important;
+  letter-spacing: -0.5px;
+}
